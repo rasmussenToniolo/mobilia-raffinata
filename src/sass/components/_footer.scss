@@ -1,0 +1,16 @@
+.footer {
+  z-index: 990;
+  position: relative;
+  width: 100%;
+  color: $light-grey;
+  background-color: $darker-grey;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+  &__copy {
+    font-size: 3rem;
+  }
+}

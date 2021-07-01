@@ -1,0 +1,39 @@
+.navbar {
+  // position: absolute;
+  // top: 1.2rem;
+  // left: 50%;
+  // transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  color: $lighter-grey;
+  font-size: 2rem;
+
+  &__list {
+    list-style-type: none;
+
+    &--item {
+      cursor: pointer;
+      display: inline-block;
+      padding: .5rem 1rem;
+      // transition: all $fast-transition linear;
+      
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      &.selected {
+        color: $white;
+        background-image: linear-gradient(to top, $light-grey, transparent 20%);
+      }
+      
+      &:hover {
+        color: $white;
+        background-image: linear-gradient(to top, $light-grey, transparent 20%);
+      }
+    }
+  }
+}

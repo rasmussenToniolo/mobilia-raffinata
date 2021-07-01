@@ -1,0 +1,33 @@
+.header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  background-color: rgba($darker-grey, .9);
+
+  &__title {
+    margin-left: 4rem;
+    font-size: 4rem;
+    border-bottom: 1px solid $light-grey;
+    padding: 1px 2rem;
+    line-height: 4rem;
+    letter-spacing: 1px;
+    user-select: none;
+    cursor: pointer;
+    transition: all $fast-transition linear;
+
+    &:hover {
+      color: $white;
+      border-color: $white;
+    }
+  }
+
+  .small-cart {
+    margin-right: 12rem;
+  }
+}

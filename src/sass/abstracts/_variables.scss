@@ -1,0 +1,13 @@
+$white: rgb(240, 240, 240);
+$lighter-grey: darken($white, 15%);
+$light-grey: darken($white, 30%);
+$medium-grey: darken($white, 50%);
+$dark-grey: darken($white, 66%);
+$darker-grey: darken($white, 80%);
+
+$solid-red: rgb(226, 0, 0);
+
+$fast-transition: 100ms;
+$medium-transition: 250ms;
+
+$easeInOutQuint: cubic-bezier(0.83, 0, 0.17, 1);

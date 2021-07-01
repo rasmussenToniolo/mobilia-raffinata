@@ -1,0 +1,15 @@
+@import './abstracts/animations';
+@import './abstracts/helpers';
+@import './abstracts/variables';
+
+@import './base/base';
+@import './base/typography';
+
+@import './components/body';
+@import './components/footer';
+@import './components/header';
+@import './components/navbar';
+@import './components/smallCart';
+
+@import './pages/about';
+@import './pages/home';
