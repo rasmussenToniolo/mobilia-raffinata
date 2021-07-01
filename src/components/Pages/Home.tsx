@@ -4,11 +4,32 @@ export function Home(props: {setSelectedNavEl: (el: string) => void}) {
   // Various videos in backgrund
   const [curVideo, setCurVideo] = useState<number>(1);
 
+  const [videoBgEl, setVideoBgEl] = useState<any>();
+
+  useEffect(() => {
+    setCurVideo(1);
+    setVideoBgEl(document.querySelector('.home-background__content'));
+
+    setInterval(() => {
+      setCurVideo(prev => {
+        if(prev > 2) {
+          return 1;
+        } else {
+          return prev + 1;
+        }
+      })
+    }, 8000)
+  }, []);
+
+  useEffect(() => {
+    if(!videoBgEl || !curVideo) return;
+    videoBgEl.src = `../../img/bg-video-${curVideo}.mp4`;
+  }, [curVideo])
+
   return (
     <>
     <div className="home-background">
-      <video className="home-background__content" autoPlay muted loop>
-        <source src={`../../img/bg-video-${curVideo}.mp4`} type="video/mp4" />
+      <video src="../../img/bg-video-1.mp4" className="home-background__content" autoPlay muted loop>
         Browser not supported for video background.
       </video>
     </div>
