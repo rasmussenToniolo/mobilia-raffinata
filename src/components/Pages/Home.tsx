@@ -17,13 +17,21 @@ export function Home(props: {setSelectedNavEl: (el: string) => void}) {
         } else {
           return prev + 1;
         }
-      })
+      });
     }, 8000)
   }, []);
 
   useEffect(() => {
     if(!videoBgEl || !curVideo) return;
-    videoBgEl.src = `../../img/bg-video-${curVideo}.mp4`;
+    videoBgEl.style.opacity = '0';
+
+    const opacityVideo = setTimeout(() => {
+      console.log(curVideo)
+      videoBgEl.src = `../../img/bg-video-${curVideo}.mp4`;
+      videoBgEl.style.opacity = '1';
+    }, 1000);
+
+    return () => {clearTimeout(opacityVideo)}
   }, [curVideo])
 
   return (
