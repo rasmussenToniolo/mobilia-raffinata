@@ -1,6 +1,6 @@
+@import './abstracts/variables';
 @import './abstracts/animations';
 @import './abstracts/helpers';
-@import './abstracts/variables';
 
 @import './base/base';
 @import './base/typography';
@@ -12,4 +12,5 @@
 @import './components/smallCart';
 
 @import './pages/about';
+@import './pages/contact';
 @import './pages/home';

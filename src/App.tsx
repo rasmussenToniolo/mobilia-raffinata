@@ -3,6 +3,7 @@ import './sass/main.scss';
 import {Header} from './components/HeaderComponents/Header';
 import {Home} from './components/Pages/Home';
 import {About} from './components/Pages/About';
+import {Contact} from './components/Pages/Contact';
 import {Footer} from './components/Footer';
 const productsData = require('./products.json');
 
@@ -40,6 +41,9 @@ export const App = () => {
         :
         selectedNavEl === 'about' ?
         <About />
+        :
+        selectedNavEl === 'contact' ?
+        <Contact />
         :
         ''}
       </div>

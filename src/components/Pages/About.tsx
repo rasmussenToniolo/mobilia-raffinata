@@ -5,7 +5,7 @@ export function About() {
         <img src="../../img/barn-photo.jpg" alt="barn photo" className="about-bg-photo__img" />
       </div>
       <main className="about">
-        <h2 className="about__title">About us</h2>
+        <h2 className="about__title page-title">About us</h2>
 
         <section className="about__text first">
           <h3 className="about__text--title">Since 1929</h3>

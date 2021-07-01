@@ -26,7 +26,6 @@ export function Home(props: {setSelectedNavEl: (el: string) => void}) {
     videoBgEl.style.opacity = '0';
 
     const opacityVideo = setTimeout(() => {
-      console.log(curVideo)
       videoBgEl.src = `../../img/bg-video-${curVideo}.mp4`;
       videoBgEl.style.opacity = '1';
     }, 1000);
