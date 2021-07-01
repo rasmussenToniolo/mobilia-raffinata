@@ -19,6 +19,11 @@ export function Home(props: {setSelectedNavEl: (el: string) => void}) {
         }
       });
     }, 8000)
+
+    return () => {
+      setVideoBgEl(undefined);
+      setCurVideo(1);
+    }
   }, []);
 
   useEffect(() => {
