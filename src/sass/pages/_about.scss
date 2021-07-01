@@ -6,7 +6,6 @@
   background-color: rgba(black, .6);
 
   &-bg-photo {
-    z-index: 200;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,9 +13,16 @@
     height: 100%;
 
     &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      filter: blur(.6rem);
       object-fit: cover;
+      
+      &#old-photo {
+        filter: blur(2px);
+        transition: visibility 0s, opacity $slow-transition linear;
+      }
     }
   }
 
@@ -37,6 +43,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    transition: opacity $slow-transition linear;
     
     &.second {
       margin-top: 70rem;
