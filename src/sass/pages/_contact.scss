@@ -10,6 +10,10 @@
   &__title {
     padding-top: 10rem;
     margin: auto;
+
+    @media (max-width: 700px) {
+      padding-top: 14rem;
+    }
   }
 
   &__form {

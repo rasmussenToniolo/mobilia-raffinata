@@ -9,6 +9,18 @@ html {
   height: 100%;
   width: 100%;
   background-color: $dark-grey;
+
+  @media (max-width: 1250px) {
+    font-size: 50%;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 40%;
+  }
+
+  // @media (max-width: 600px) {
+  //   font-size: 50%;
+  // }
 }
 
 

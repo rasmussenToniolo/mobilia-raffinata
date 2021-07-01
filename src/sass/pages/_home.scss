@@ -43,6 +43,14 @@
       right: 20rem;
     }
 
+    @media (max-width: 550px) {
+      &.first,
+      &.second {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
     &.third {
       left: 50%;
       transform: translateX(-50%);
