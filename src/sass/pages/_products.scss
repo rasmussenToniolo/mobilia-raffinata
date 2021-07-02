@@ -10,12 +10,14 @@
   }
 
   &__store {
-    height: 100rem;
+    // height: 100rem;
     width: 100%;
     // border: 2px solid white;
+    margin: 1rem 0;
   }
 
   &__filters {
+    // position: fixed;
     width: 30rem;
     height: 100%;
     margin: 0 2rem;

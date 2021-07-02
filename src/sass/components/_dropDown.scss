@@ -58,6 +58,9 @@
 
   &__options {
     position: relative;
+    // BUG BUG BUG
+    // Parent element takes full height (ul included), thanks to the transform property
+    // Find a way to make the same effect, but affecting at the same time the document flow
     z-index: 30;
     width: 100%;
     padding-bottom: .5rem;
@@ -94,6 +97,7 @@
 
         &--label {
           width: 100%;
+          font-size: 2rem;
           cursor: pointer;
           padding: 1rem;
         }
