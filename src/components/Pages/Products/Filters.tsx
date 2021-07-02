@@ -5,7 +5,8 @@ export function Filters(props: {data: Product[]; setData: (data: Product[]) => v
   
   return (
     <div className="products__filters">
-      <DropDown title="category" data={['sofa', 'chair', 'table']} />
+      <DropDown title="category" data={['sofa', 'chair', 'table', 'sets']} />
+      <DropDown title="availability" data={['in stock', 'out of stock', 'back order']} />
     </div>
   )
 }
