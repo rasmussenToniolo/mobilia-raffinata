@@ -1,0 +1,106 @@
+.drop-down {
+  width: 100%;
+  overflow: hidden;
+  
+  &__title {
+    position: relative;
+    z-index: 40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+    cursor: pointer;
+    background-color: $dark-grey;
+
+    &.open {
+      border-bottom-color: transparent;
+    }
+
+    &--text {
+      font-size: 3rem;
+      text-transform: capitalize;
+      color: $light-grey;
+      user-select: none;
+      transition: color $fast-transition linear;
+    }
+
+    &--drop-btn {
+      border: none;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      .bi {
+        width: 3rem;
+        height: 3rem;
+        color: $light-grey;
+        transition: color $fast-transition linear, transform $medium-transition ease-in-out;
+      }
+
+      &.open {
+        .bi {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &:hover &--drop-btn .bi,
+    &:hover &--text,
+    &.open &--text,
+    &.open &--drop-btn .bi {
+      color: $white;
+    }
+  }
+
+  &__options {
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid $light-grey;
+    transform: translateY(calc(-100% + 1px)); // + 1px to be able to display the border
+    transition: transform $medium-transition ease-in-out;
+
+    &.open {
+      // slide down
+      transform: translateY(0);
+    }
+
+    &--list {
+      list-style-type: none;
+
+      &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $dark-grey;
+        user-select: none;
+
+        color: $white;
+        font-size: 1.8rem;
+        text-transform: capitalize;
+
+        border-radius: 2px;
+
+        &--checkbox {
+          margin-left: 1rem;
+          background-color: $medium-grey;
+        }
+
+        &--label {
+          width: 100%;
+          cursor: pointer;
+          padding: 1rem;
+        }
+
+        &:hover {
+          background-color: $darker-grey;
+        }
+      }
+    }
+
+  }
+}

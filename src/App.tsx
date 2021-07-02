@@ -3,9 +3,9 @@ import './sass/main.scss';
 import {Header} from './components/HeaderComponents/Header';
 import {Home} from './components/Pages/Home';
 import {About} from './components/Pages/About';
+import { Products } from './components/Pages/Products/Products';
 import {Contact} from './components/Pages/Contact';
 import {Footer} from './components/Footer';
-const productsData = require('./products.json');
 
 export interface CartItem {
   id: number;
@@ -44,6 +44,9 @@ export const App = () => {
         :
         selectedNavEl === 'contact' ?
         <Contact />
+        :
+        selectedNavEl === 'products' ?
+        <Products setCartItems={setCartItems} />
         :
         ''}
       </div>
