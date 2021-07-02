@@ -78,7 +78,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        justify-content: space-between;
+        // justify-content: space-between;
         align-items: flex-start;
         margin-left: 2rem;
         
@@ -92,6 +92,7 @@
           padding: .5rem 1rem;
           flex-shrink: 0;
           margin-top: 2px;
+          margin-bottom: 1rem;
         }
 
         &--price {
@@ -105,9 +106,10 @@
         }
 
         &--stock {
+          margin-top: 2rem;
           font-size: 1.8rem;
           text-transform: capitalize;
-          margin-bottom: 8rem;
+          margin-bottom: 2rem;
 
           &.in {
             color: $green;
