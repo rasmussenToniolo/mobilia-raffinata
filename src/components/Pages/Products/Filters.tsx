@@ -13,6 +13,9 @@ export function Filters(props: {data: Product[]; setData: (data: Product[]) => v
       <DropDown title="availability" data={['in stock', 'out of stock', 'back order']} />
 
       <Slider step={0.1} minNum={1} maxNum={5} title="rating" />
+
+      <DropDown title="color" data={['blue', 'red', 'black', 'brown', 'green']} />
+
     </div>
   )
 }

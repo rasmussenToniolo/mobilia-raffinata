@@ -2,6 +2,7 @@ const productsData = require('../../../products.json');
 import { useState } from "react";
 import { CartItem } from "../../../App";
 import { Filters } from "./Filters";
+import { TopBar } from './TopBar';
 console.log(productsData.data[0])
 
 interface ProductRating {
@@ -35,7 +36,7 @@ export function Products(props: {setCartItems: (items: CartItem[]) => void;}) {
       <section className="products__store">
         <Filters setData={setData} data={data} />
 
-
+        <TopBar />
       </section>
     </main>
   )

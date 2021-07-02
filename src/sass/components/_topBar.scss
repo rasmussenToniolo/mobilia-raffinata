@@ -1,0 +1,103 @@
+.top-bar {
+  position: absolute;
+  top: 1rem;
+  right: 4rem;
+  width: calc(100% - 38rem);
+  height: 12rem;
+  border-bottom: 1px solid $light-grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $dark-grey;
+  // border: 2px solid white;
+
+
+  &__search {
+    position: relative;
+    height: 100%;
+    width: 100rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 2rem;
+
+    &--input {
+      background-color: $dark-grey;
+      padding: .5rem 1rem;
+      width: 100%;
+      font-size: 1.6rem;
+      color: $lighter-grey;
+      border: 1px solid transparent;
+      border-bottom: 1px solid $light-grey;
+      box-shadow: 0 1rem 1rem -1rem $darker-grey;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 1rem 1rem -1rem black;
+      }
+    }
+
+    &--label {
+      font-size: 2rem;
+      color: $light-grey;
+      position: absolute;
+      top: 8rem;
+    }
+  }
+
+  &__sort-selector {
+    width: 12rem;
+    margin-left: 4rem;
+    padding: .5rem 1rem;
+    font-size: 1.6rem;
+    color: $lighter-grey;
+    text-transform: capitalize;
+    background-color: $dark-grey;
+    border: 1px solid transparent;
+    border-bottom: 1px solid $light-grey;
+    box-shadow: 0 1rem 1rem -1rem $darker-grey;
+
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__layout {
+    position: absolute;
+    right: 4rem;
+    // border: 2px solid black;
+    margin-left: 2rem;
+    width: 12rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .layout-btn {
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: .5rem;
+      background-color: transparent;
+      cursor: pointer;
+      border-radius: .5rem;
+
+      .bi {
+        width: 4rem;
+        height: 4rem;
+        color: $light-grey;
+        transition: color $fast-transition linear;
+      }
+
+      &:hover,
+      &.selected {
+        .bi {
+          color: $white;
+        }
+      }
+    }
+  }
+}
