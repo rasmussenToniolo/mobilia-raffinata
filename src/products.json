@@ -8,7 +8,7 @@
       "price": 5499,
       "stock": 1,
       "id": "SFA-ANTQ-STRP",
-      "images": ["https://images.unsplash.com/photo-1570569441276-ff551cba7331?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"],
+      "images": ["https://images.unsplash.com/photo-1570569441276-ff551cba7331?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80", "https://images.unsplash.com/photo-1570569441276-ff551cba7331?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80", "https://images.unsplash.com/photo-1570569441276-ff551cba7331?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80", "https://images.unsplash.com/photo-1570569441276-ff551cba7331?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"],
       "ratings": [
         {
         "name": "Johnny",

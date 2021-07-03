@@ -4,8 +4,6 @@ export function About() {
   const [secondSection, setSecondSection] = useState<any>();
 
   function obsCallback() {
-    console.log('observed');
-
     const oldPhoto = document.getElementById('old-photo');
     oldPhoto?.classList.toggle('hidden');
 

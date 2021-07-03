@@ -6,6 +6,33 @@
   overflow: hidden;
   box-shadow: 0 .5rem 2rem 0 $darker-grey;
 
+  &__img {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    
+    .img-control-btn {
+      z-index: 300;
+      cursor: pointer;
+
+      &.disabled {
+        cursor: not-allowed;
+      }
+
+      &.disabled:hover .bi {
+        transform: scale(1) !important;
+      }
+    }
+    
+    &--img {
+      flex-shrink: 0;
+      transform: trasnlateX(0);
+      transition: transform $medium-transition ease-in-out;
+    }
+  }
+
   &:hover {
     background-color: $darker-grey;
   }
@@ -205,7 +232,7 @@
       padding: 0 1rem;
       justify-content: center;
       align-items: center;
-      cursor: pointer;
+      // cursor: pointer;
       filter: drop-shadow(0 0 2px black);
       
       .bi {

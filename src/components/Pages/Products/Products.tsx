@@ -4,7 +4,6 @@ import { CartItem } from "../../../App";
 import { Filters } from "./Filters";
 import { TopBar } from './TopBar';
 import { Product } from './Product';
-console.log(productsData.data[0])
 
 interface ProductRating {
   dateTime: string;
