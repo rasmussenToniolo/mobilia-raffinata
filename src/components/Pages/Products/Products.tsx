@@ -29,7 +29,7 @@ export interface ProductType {
 export function Products(props: {setCartItems: (items: CartItem[]) => void;}) {
 
   const [data, setData] = useState<ProductType[]>(productsData.data);
-  const [layout, setLayout] = useState<"row" | "grid">('row');
+  const [layout, setLayout] = useState<"row" | "grid">('grid');
 
 
   return (

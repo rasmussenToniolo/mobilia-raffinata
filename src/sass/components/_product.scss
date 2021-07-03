@@ -3,6 +3,8 @@
   border-radius: 1rem;
   transition: background-color $fast-transition linear;
   margin: 1rem;
+  overflow: hidden;
+  box-shadow: 0 .5rem 2rem 0 $darker-grey;
 
   &:hover {
     background-color: $darker-grey;
@@ -16,7 +18,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    overflow: hidden;
 
     .product {
       &__img {
@@ -31,45 +32,6 @@
           height: 100%;
           width: 100%;
         }
-        
-        &--controls {
-          position: absolute;
-          z-index: 100;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          
-          &:hover .img-control-btn .bi {
-            color: $white;
-          }
-
-          .img-control-btn {
-            border: none;
-            background-color: transparent;
-            display: flex;
-            height: 100%;
-            padding: 0 1rem;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            filter: drop-shadow(0 0 2px black);
-            
-            .bi {
-              width: 4rem;
-              height: 4rem;
-              color: $lighter-grey;
-              transition: all $fast-transition linear;
-            }
-
-            &:hover .bi {
-              transform: scale(1.2);
-            }
-          }
-        }
       }
 
       &__data {
@@ -78,9 +40,10 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        // justify-content: space-between;
+        justify-content: flex-start;
         align-items: flex-start;
         margin-left: 2rem;
+        cursor: pointer;
         
         &--title {
           border-bottom: 1px solid $light-grey;
@@ -129,7 +92,132 @@
   }
 
   &.grid {
+    position: relative;
     width: 35rem;
     height: 45rem;
+    transition: transform $fast-transition ease-in-out;
+
+    &:hover .product__data {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    .product {
+      &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+  
+        &--img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+
+        &--controls {
+          align-items: flex-start;
+
+          .img-control-btn {
+            height: 50%;
+          }          
+        }
+      }
+
+      &__data {
+        position: absolute;
+        z-index: 200;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(black, .75);
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        cursor: pointer;
+        transition: opacity $fast-transition linear;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &--title {
+          font-size: 2rem;
+          width: 100%;
+          color: $white;
+          flex-shrink: 0;
+        }
+
+        &--price {
+          font-size: 1.8rem;
+        }
+
+        &--rating {
+          font-size: 1.4rem;
+
+        }
+
+        &--stock {
+          font-size: 1.2rem;
+          text-transform: capitalize;
+
+          &.in {
+            color: $green;
+          }
+
+          &.back {
+            color: yellow;
+          }
+
+          &.out {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+
+  .img-controls {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &:hover .img-control-btn .bi {
+      color: $white;
+    }
+
+    .img-control-btn {
+      border: none;
+      background-color: transparent;
+      display: flex;
+      height: 100%;
+      padding: 0 1rem;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      filter: drop-shadow(0 0 2px black);
+      
+      .bi {
+        width: 4rem;
+        height: 4rem;
+        color: $lighter-grey;
+        transition: all $fast-transition linear;
+      }
+
+      &:hover .bi {
+        transform: scale(1.2);
+      }
+    }
   }
 }
