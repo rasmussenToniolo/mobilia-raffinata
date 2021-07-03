@@ -25,12 +25,19 @@ export interface ProductType {
   stock: number;
 }
 
+export type SortOptions = 'price-desc' | 'price-asc' | 'rating-desc' | 'rating-asc';
+
+export const getAvgRating = (product: ProductType) => product.ratings ? product.ratings.map(rating => rating.rating).reduce((a, b) => a+b, 0) / product.ratings.length : 0;
+
 export function Products(props: {setCartItems: (items: CartItem[]) => void;}) {
 
   const [data, setData] = useState<ProductType[] | []>(productsData.data);
   const [layout, setLayout] = useState<"row" | "grid">('grid');
 
   const [query, setQuery] = useState<string>('');
+
+  const [sort, setSort] = useState<SortOptions>('price-desc');
+
 
   useEffect(() => {
     // filter data based on query
@@ -40,10 +47,27 @@ export function Products(props: {setCartItems: (items: CartItem[]) => void;}) {
     }
 
     setData(productsData.data.filter((product: ProductType) => product.name.toLowerCase().trim().includes(query.toLowerCase().trim())));
-    console.log('update query')
-    console.log(query);
+  }, [query]);
 
-  }, [query])
+  useEffect(() => {
+    console.log(sort);
+    switch(sort) {
+      case 'price-desc':
+        setData(data.sort((a: ProductType, b: ProductType) => a.price > b.price ? 1 : 0));
+        break;
+      case 'price-asc':
+        setData(data.sort((a: ProductType, b: ProductType) => a.price < b.price ? 1 : 0));
+        break;
+      case 'rating-desc':
+        setData(data.sort((a: ProductType, b: ProductType) => getAvgRating(a) > getAvgRating(b) ? 1 : 0));
+        break;
+      case 'rating-asc':
+        setData(data.sort((a: ProductType, b: ProductType) => getAvgRating(a) > getAvgRating(b) ? 1 : 0));
+        break;
+      default:
+        break;
+    }
+  }, [sort])
 
   return (
     <main className="products">
@@ -52,7 +76,15 @@ export function Products(props: {setCartItems: (items: CartItem[]) => void;}) {
       <section className="products__store">
         <Filters setData={setData} data={data} />
 
-        <TopBar productsFound={data.length} handleSearch={setQuery} query={query} setLayout={setLayout} layout={layout} />
+        <TopBar
+        productsFound={data.length}
+        handleSearch={setQuery}
+        query={query}
+        setLayout={setLayout}
+        layout={layout}
+        sortVal={sort}
+        setSortVal={setSort}
+        />
 
         <div className="products__store--products">
           {data.map(product => (

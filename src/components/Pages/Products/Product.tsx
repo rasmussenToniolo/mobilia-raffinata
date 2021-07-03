@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import {ProductType} from './Products';
+import {getAvgRating} from './Products';
 
 interface ProductProps {
   layout: "row" | "grid";
@@ -7,8 +8,6 @@ interface ProductProps {
 }
 
 export function Product(props: ProductProps) {
-  const avgRating = props.data.ratings ? props.data.ratings.map(rating => rating.rating).reduce((a, b) => a+b, 0) / props.data.ratings.length : undefined;
-
   const stockMsg = props.data.stock > 0 ? 'in' : props.data.stock < 0 ? 'back' : 'out';
   
   const [imgPos, setImgPos] = useState<number>(0);
@@ -94,7 +93,7 @@ export function Product(props: ProductProps) {
 
         <p className="product__data--price">${props.data.price}</p>
 
-        <p className="product__data--rating">{avgRating || 0} &#11088;</p>
+        <p className="product__data--rating">{getAvgRating(props.data).toFixed(1) || 0} &#11088;</p>
 
         <p className={`product__data--stock ${stockMsg}`}>{stockMsg === 'in' ? 'in stock' : stockMsg === 'back' ? 'on back order' : stockMsg === 'out' ? 'out of stock' : ''}</p>
       </div>

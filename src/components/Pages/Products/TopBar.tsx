@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import {SortOptions} from './Products';
 
 interface TopBarProps {
   layout: string;
@@ -6,6 +7,8 @@ interface TopBarProps {
   handleSearch: (query: string) => void;
   query: string;
   productsFound: number;
+  sortVal: SortOptions;
+  setSortVal: (sort: SortOptions) => void;
 }
 
 export function TopBar(props: TopBarProps) {
@@ -19,7 +22,7 @@ export function TopBar(props: TopBarProps) {
         </label>
       </div>
 
-      <select name="sort" id="sort" className="top-bar__sort-selector">
+      <select value={props.sortVal} onChange={(e: any) => props.setSortVal(e.target.value as SortOptions)} name="sort" id="sort" className="top-bar__sort-selector">
         <option value="price-desc" className="top-bar__sort-selector--option">Price &darr;</option>
         <option value="price-asc" className="top-bar__sort-selector--option">Price &uarr;</option>
 
