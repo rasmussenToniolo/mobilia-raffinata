@@ -1,5 +1,5 @@
 const productsData = require('../../../products.json');
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CartItem } from "../../../App";
 import { Filters } from "./Filters";
 import { TopBar } from './TopBar';
@@ -27,9 +27,23 @@ export interface ProductType {
 
 export function Products(props: {setCartItems: (items: CartItem[]) => void;}) {
 
-  const [data, setData] = useState<ProductType[]>(productsData.data);
+  const [data, setData] = useState<ProductType[] | []>(productsData.data);
   const [layout, setLayout] = useState<"row" | "grid">('grid');
 
+  const [query, setQuery] = useState<string>('');
+
+  useEffect(() => {
+    // filter data based on query
+    if(query === '') {
+      setData(productsData.data);
+      return;
+    }
+
+    setData(productsData.data.filter((product: ProductType) => product.name.toLowerCase().trim().includes(query.toLowerCase().trim())));
+    console.log('update query')
+    console.log(query);
+
+  }, [query])
 
   return (
     <main className="products">
@@ -38,7 +52,7 @@ export function Products(props: {setCartItems: (items: CartItem[]) => void;}) {
       <section className="products__store">
         <Filters setData={setData} data={data} />
 
-        <TopBar setLayout={setLayout} layout={layout} />
+        <TopBar productsFound={data.length} handleSearch={setQuery} query={query} setLayout={setLayout} layout={layout} />
 
         <div className="products__store--products">
           {data.map(product => (

@@ -3,6 +3,9 @@ import { useState } from "react"
 interface TopBarProps {
   layout: string;
   setLayout: (layout: "row" | "grid") => void;
+  handleSearch: (query: string) => void;
+  query: string;
+  productsFound: number;
 }
 
 export function TopBar(props: TopBarProps) {
@@ -10,8 +13,10 @@ export function TopBar(props: TopBarProps) {
   return (
     <div className="top-bar">
       <div className="top-bar__search">
-        <input id="search" type="text" className="top-bar__search--input" placeholder="Search..." />
-        <label htmlFor="search" className="top-bar__search--label">19 products found</label>
+        <input value={props.query} onChange={(e: any) => {props.handleSearch(e.target.value)}} id="search" type="text" className="top-bar__search--input" placeholder="Search..." />
+        <label htmlFor="search" className="top-bar__search--label">
+          {props.productsFound === 0 ? 'No products found' : props.productsFound === 1 ? '1 product found' : `${props.productsFound} products found`}
+        </label>
       </div>
 
       <select name="sort" id="sort" className="top-bar__sort-selector">
