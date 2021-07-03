@@ -62,7 +62,7 @@ export function Products(props: {setCartItems: (items: CartItem[]) => void;}) {
         setData(data.sort((a: ProductType, b: ProductType) => getAvgRating(a) > getAvgRating(b) ? 1 : 0));
         break;
       case 'rating-asc':
-        setData(data.sort((a: ProductType, b: ProductType) => getAvgRating(a) > getAvgRating(b) ? 1 : 0));
+        setData(data.sort((a: ProductType, b: ProductType) => getAvgRating(a) < getAvgRating(b) ? 1 : 0));
         break;
       default:
         break;
