@@ -3,11 +3,24 @@ import { useState } from "react";
 interface DropDownProps {
   title: string;
   data: string[];
+  state: any;
+  setState: (newState: any) => void;
 }
 
 export function DropDown(props: DropDownProps) {
   const [open, setOpen] = useState<boolean>(false);
-  
+
+  function handleCheckboxClick(id: string) {
+    console.log(props.state);
+    props.setState((prevState: string[]) => {
+      if(prevState.includes(id)) {
+        return prevState.filter(selectedOption => selectedOption !== id);
+      } else {
+        return [...prevState, id];
+      }
+    })
+  }
+
   return (
     <div className="drop-down">
       <div onClick={() => setOpen(prev => !prev)} className={`drop-down__title ${open ? 'open' : ''}`}>
@@ -24,8 +37,8 @@ export function DropDown(props: DropDownProps) {
         <ul className="drop-down__options--list">
           {props.data.map(option => (
             <li key={`${props.title}-${option}`} className="drop-down__options--list__item">
-              <input name={props.title} id={option} type="checkbox" className="drop-down__options--list__item--checkbox" />
-              <label htmlFor={option} className="drop-down__options--list__item--label">{option}</label>
+              <input checked={props.state.includes(option)} onChange={() => handleCheckboxClick(option)} name={props.title} id={option} type="checkbox" className="drop-down__options--list__item--checkbox" />
+              <label htmlFor={option} className="drop-down__options--list__item--label">{option.split('-').join(' ')}</label>
             </li>
           ))}
         </ul>
