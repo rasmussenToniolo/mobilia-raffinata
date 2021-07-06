@@ -5,6 +5,8 @@ import {getAvgRating} from './Products';
 interface ProductProps {
   layout: "row" | "grid";
   data: ProductType;
+  pageEl: HTMLElement | null;
+  setProductData: (data: ProductType) => void;
 }
 
 export function Product(props: ProductProps) {
@@ -65,7 +67,16 @@ export function Product(props: ProductProps) {
     return () => {
       setImgEls(null);
     }
-  }, [])
+  }, []);
+
+  function handleProductClick() {
+    // Assign data to product page and slide the page in
+    props.setProductData(props.data);
+
+    if(!props.pageEl) return;
+
+    props.pageEl.style.transform = 'translate(0)';
+  }
 
   return (
     <div className={`product ${props.layout}`}>
@@ -88,7 +99,7 @@ export function Product(props: ProductProps) {
         </div>
       </div>
 
-      <div className="product__data">
+      <div onClick={handleProductClick} className="product__data">
         <h2 className="product__data--title">{props.data.name}</h2>
 
         <p className="product__data--price">${props.data.price}</p>

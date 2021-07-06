@@ -6,6 +6,10 @@
   overflow: hidden;
   box-shadow: 0 .5rem 2rem 0 $darker-grey;
 
+  &__data {
+    user-select: none;
+  }
+
   &__img {
     display: flex;
     flex-direction: row;
@@ -236,7 +240,6 @@
       padding: 0 1rem;
       justify-content: center;
       align-items: center;
-      // cursor: pointer;
       filter: drop-shadow(0 0 2px black);
       
       .bi {
@@ -250,5 +253,17 @@
         transform: scale(1.2);
       }
     }
+  }
+
+  &__page {
+    position: absolute;
+    z-index: 400;
+    top: 6rem;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: $dark-grey;
+    transform: translateX(100vw);
+    transition: transform $medium-slow-transition ease-in-out;
   }
 }

@@ -1,0 +1,250 @@
+.product-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  &__back-btn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform $medium-transition linear;
+
+    .bi {
+      width: 4rem;
+      height: 4rem;
+      color: $lighter-grey;
+      transition: color $medium-transition linear;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+
+      .bi {
+        color: $white;
+      }
+    }
+  }
+
+  &__product {
+    position: relative;
+    margin: 0 6rem;
+    // border: 2px solid white;
+    margin-top: 4rem;
+    margin-bottom: 14rem;
+    width: calc(100% - 12rem);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__images {
+    position: relative;
+    margin-left: 4rem;
+    width: 50rem;
+    height: 50rem;
+    // border: 2px solid white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;    
+    
+    &--image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 40rem;
+      
+      &--content {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &--options {
+      width: 100%;
+      height: 10rem;
+      overflow-x: scroll;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      
+      &__option {
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid $light-grey;
+        width: 8rem;
+        height: 8rem;
+        transition: border-color $fast-transition linear;
+
+        &.selected {
+          border-color: $white;
+        }
+
+        &:not(:first-child) {
+          margin-left: 1rem;
+        }
+
+        &--img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &:hover {
+          border-color: $white;
+        }
+      }
+    }
+  }
+
+
+  &__data {
+    // border: 2px solid white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 2rem;
+
+    &--title {
+      font-size: 4rem;
+      color: $white;
+    }
+
+    &--rating {
+      font-size: 2rem;
+
+      &__btn {
+        cursor: pointer;
+        margin-left: 1rem;
+        color: $light-grey;
+        font-size: 1.6rem;
+        border-bottom: 1px solid transparent;
+        transition: all $fast-transition linear;
+
+        &:hover {
+          color: $lighter-grey;
+          border-color: $lighter-grey;
+        }
+      }
+    }
+
+    &--price {
+      margin: 2rem 0;
+      font-size: 4rem;
+      color: $white;
+    }
+
+    &--stock {
+      font-size: 2rem;
+      text-transform: capitalize;
+
+      &.in-stock {
+        color: $green;
+      }
+
+      &.back-order {
+        color: yellow;
+      }
+
+      &.out-of-stock {
+        color: red;
+      }
+    }
+  }
+
+  &__color-selector {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &--text {
+      font-size: 1.8rem;
+      color: $lighter-grey;
+    }
+
+    &--option {
+
+      &-btn {
+        margin: 0 1rem;
+      }
+
+      &-text {
+        font-size: 1.4rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &__cart-controls {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &--add-btn {
+      border: 1px solid $light-grey;
+      font-size: 2rem;
+      color: $lighter-grey;
+      background-color: $dark-grey;
+      padding: .5rem 1rem;
+      cursor: pointer;
+      margin-right: 1rem;
+      transition: all $fast-transition linear;
+
+      &:hover {
+        color: $white;
+        border-color: $lighter-grey;
+      }
+    }
+
+    &--quantity {
+      font-size: 3rem;
+      width: 5rem;
+      text-align: center;
+      user-select: none;
+    }
+
+    &--less,
+    &--more {
+      border: none;
+      background-color: $dark-grey;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .bi {
+        width: 4rem;
+        height: 4rem;
+        color: $lighter-grey;
+      }
+
+      &:hover {
+        .bi {
+          color :$white;
+        }
+      }
+    }
+  }
+
+  &__reviews {
+    position: relative;
+    width: 100%;
+
+    &--title {
+      font-size: 3rem;
+    }
+  }
+}

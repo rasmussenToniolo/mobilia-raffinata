@@ -5,6 +5,7 @@ import { TopBar } from './TopBar';
 import { Product } from './Product';
 import { DropDown } from "./DropDown";
 import { Slider } from "./Slider";
+import {ProductPage} from './ProductPage';
 
 interface ProductRating {
   dateTime: string;
@@ -57,13 +58,15 @@ export function Products(props: {setCartItems: (items: CartItem[]) => void;}) {
   const [selectedRating, setSelectedRating] = useState<number>(5);
 
   const [selectedMaxPrice, setSelectedMaxPrice] = useState<number>(maxPrice);
+
+  const [productData, setProductData] = useState<ProductType | undefined>(undefined);
+
+  const [pageEl, setPageEl] = useState<HTMLElement | null>(null);
   
   useEffect(() => {
     // Dynamic data display
-    console.log(query, sort, selectedCats, selectedStock, selectedColors, selectedRating, selectedMaxPrice);
 
     let dataVar: ProductType[] = [...productsData.data];
-    console.log(dataVar);
 
     // Sorting
     switch(sort) {
@@ -124,8 +127,12 @@ export function Products(props: {setCartItems: (items: CartItem[]) => void;}) {
 
   }, [sort, query, selectedCats, selectedMaxPrice, selectedColors, selectedRating, selectedStock]);
 
+  useEffect(() => {
+    setPageEl(document.querySelector('.product__page') as HTMLElement);
+  }, [])
 
   return (
+    <>
     <main className="products">
       <h2 className="products__title page-title">Products</h2>
 
@@ -144,21 +151,33 @@ export function Products(props: {setCartItems: (items: CartItem[]) => void;}) {
         </div>
 
         <TopBar
-        productsFound={data.length}
-        handleSearch={setQuery}
-        query={query}
-        setLayout={setLayout}
-        layout={layout}
-        sortVal={sort}
-        setSortVal={setSort}
+          productsFound={data.length}
+          handleSearch={setQuery}
+          query={query}
+          setLayout={setLayout}
+          layout={layout}
+          sortVal={sort}
+          setSortVal={setSort}
         />
 
         <div className="products__store--products">
           {data.map(product => (
-            <Product key={product.id} data={product} layout={layout} />
+            <Product
+              setProductData={setProductData}
+              key={product.id}
+              data={product}
+              layout={layout}
+              pageEl={pageEl}
+            />
           ))}
         </div>
       </section>
+
+      <ProductPage
+        data={productData}
+        pageEl={pageEl}
+      />
     </main>
+    </>
   )
 }
