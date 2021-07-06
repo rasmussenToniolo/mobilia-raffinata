@@ -262,6 +262,7 @@
     }
 
     .review {
+      position: relative;
       margin: 2rem 0;
       border-radius: 2px;
       padding: .5rem 0;
@@ -269,16 +270,30 @@
       border-top: 1px solid $light-grey;
       display: flex;
       flex-direction: column;
+      list-style-type: none;
       
+      &__date {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.2rem;
+      }
 
       &__name {
         text-transform: capitalize;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
       }
 
       &__rating {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         letter-spacing: 1px;
+      }
+
+      &__title {
+        margin-left: 1rem;
+        font-size: 1.4rem;
+        color: $white;
+        font-weight: 900;
       }
 
       &__description {

@@ -66,6 +66,11 @@ export function ProductPage(props: {data: ProductType | undefined; pageEl: HTMLE
 
     return starsArr;
   }
+
+  function getDateStr(dateTime: string) {
+    const date = new Date(dateTime);
+    return date.toDateString();
+  }
   
 
   return (
@@ -133,15 +138,18 @@ export function ProductPage(props: {data: ProductType | undefined; pageEl: HTMLE
         <div className="product-page__reviews">
           <h3 className="product-page__reviews--title">Reviews</h3>
 
-          <div className="product-page__reviews--content">
-            {props.data?.ratings?.map(rating => (
-              <div key={`${rating.dateTime}-${rating.title}`} className="review">
+          <ul className="product-page__reviews--content">
+            {props.data?.ratings?.map((rating, i) => 
+              // React throws the 'unique key' error, but i dont get why 
+
+              <li key={`review-${rating.dateTime}-${rating.title}-${i}`} className="review">
+                <p className="review__date">{getDateStr(rating.dateTime)}</p>
                 <p className="review__name">{rating.name}</p>
-                <p className="review__rating">{getRatingStars(rating.rating)}</p>
+                <p className="review__rating">{getRatingStars(rating.rating)}<span className="review__title">{rating.title}</span></p>
                 <p className="review__description">{rating.description}</p>
-              </div>
-            ))}
-          </div>
+              </li>
+            )}
+          </ul>
         </div>
       </div>
     </section>
