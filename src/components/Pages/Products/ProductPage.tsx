@@ -1,12 +1,22 @@
 import { useEffect, useState } from "react";
 import { ProductType } from "./Products";
 import { getAvgRating } from "./Products";
+import {CartItem} from '../../../App';
 
-export function ProductPage(props: {data: ProductType | undefined; pageEl: HTMLElement | null}) {
+interface ProductPageProps {
+  data: ProductType | undefined;
+  pageEl: HTMLElement | null;
+  cartItems: CartItem[] | [];
+  setCartItems: (items: CartItem[]) => void;
+}
+
+export function ProductPage(props: ProductPageProps) {
 
   const [quantity, setQuantity] = useState<number>(1);
 
   const [imgSource, setImgSource] = useState<number>(0);
+
+  const [color, setColor] = useState<string>('');
 
   function handleBackBtn() {
     if(!props.pageEl) return;
@@ -48,11 +58,32 @@ export function ProductPage(props: {data: ProductType | undefined; pageEl: HTMLE
 
   function handleAddToCart() {
     // Display message that it has been added to cart
+    if(!props.data) return;
+
+    if(props.cartItems.map(item => item.id).includes(props.data.id)) {
+      // show message of item already on cart
+      return;
+    }
+
+    if(color === '') {
+      // show message of 'select color'
+      return;
+    }
+
+    const newItem: CartItem = {
+      id: props.data.id,
+      imgUrl: props.data.images[0],
+      name: props.data.name,
+      quantity: quantity,
+      price: props.data.price * quantity,
+      color: color
+    }
+
+    props.setCartItems([...props.cartItems, newItem] as CartItem[]);
   }
 
   useEffect(() => {
     if(!props.data) return;
-
     setQuantity(1);
 
   }, [props.data]);
@@ -107,7 +138,7 @@ export function ProductPage(props: {data: ProductType | undefined; pageEl: HTMLE
 
               {props.data?.colors.map((color, i) => (
                 <div key={`${props.data?.id}-page-${color}-${i}`}>
-                  <input name={props.data?.id || 'color'} type="radio" value={color} id={`${props.data?.id || ''}-${color}`} className="product-page__color-selector--option-btn" />
+                  <input onChange={(e: any) => setColor(e.target.value)} name={props.data?.id || 'color'} type="radio" value={color} id={`${props.data?.id || ''}-${color}`} className="product-page__color-selector--option-btn" />
                   <label htmlFor={`${props.data?.id || ''}-${color}`} className="product-page__color-selector--option-text">{color.split('-').join(' ')}</label>
                 </div>
               ))}

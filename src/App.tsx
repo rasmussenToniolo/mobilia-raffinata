@@ -8,16 +8,16 @@ import {Contact} from './components/Pages/Contact';
 import {Footer} from './components/Footer';
 
 export interface CartItem {
-  id: number;
+  id: string;
   imgUrl: string;
   name: string;
   quantity: number;
   price: number;
-  priceCents: number;
+  color: string;
 }
 
 export const App = () => {
-  const [cartItems, setCartItems] = useState<CartItem[]>();
+  const [cartItems, setCartItems] = useState<CartItem[] | []>([]);
 
   const [selectedNavEl, setSelectedNavEl] = useState<string>('home'); // Also change hash and scroll to top
 
@@ -46,7 +46,7 @@ export const App = () => {
         <Contact />
         :
         selectedNavEl === 'products' ?
-        <Products setCartItems={setCartItems} />
+        <Products setCartItems={setCartItems} cartItems={cartItems} />
         :
         ''}
       </div>

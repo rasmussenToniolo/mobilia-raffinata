@@ -32,7 +32,7 @@ export type SortOptions = 'price-desc' | 'price-asc' | 'rating-desc' | 'rating-a
 
 export const getAvgRating = (product: ProductType) => product.ratings ? product.ratings.map(rating => rating.rating).reduce((a, b) => a+b, 0) / product.ratings.length : 0;
 
-export function Products(props: {setCartItems: (items: CartItem[]) => void;}) {
+export function Products(props: {setCartItems: (items: CartItem[]) => void; cartItems: CartItem[] | []}) {
 
   const [data, setData] = useState<ProductType[] | []>(productsData.data.sort((a: ProductType, b: ProductType) => b.price - a.price)); // price-desc sort as default
   
@@ -176,6 +176,8 @@ export function Products(props: {setCartItems: (items: CartItem[]) => void;}) {
       <ProductPage
         data={productData}
         pageEl={pageEl}
+        cartItems={props.cartItems}
+        setCartItems={props.setCartItems}
       />
     </main>
     </>

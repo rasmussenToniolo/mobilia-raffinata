@@ -33,6 +33,12 @@
     background-color: $dark-grey;
     transition: visibility 0s, opacity $medium-transition ease-in-out;
 
+    &--no-items {
+      font-size: 2rem;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
     &-item {
       display: flex;
       justify-content: space-between;
@@ -40,16 +46,29 @@
       margin: 1rem;
 
       &--img {
-        border: 2px solid black;
         width: 5rem;
         margin-left: 2px;
+        margin-right: 1rem;
       }
 
       &--data {
         color: $white;
 
         &__name {
+          font-size: 1.6rem;
+        }
+
+        &__price {
+          font-size: 1.6rem;
+        }
+
+        &__quantity {
           font-size: 1.4rem;
+        }
+
+        &__color {
+          font-size: 1.2rem;
+          text-transform: capitalize;
         }
       }
 
