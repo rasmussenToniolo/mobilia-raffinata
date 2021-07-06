@@ -57,7 +57,15 @@ export function ProductPage(props: {data: ProductType | undefined; pageEl: HTMLE
 
   }, [props.data]);
 
+  function getRatingStars(stars: number) {
+    const starsArr: JSX.Element[] = [];
 
+    for(let i = 0; i < stars; i++) {
+      starsArr.push(<>&#11088;</>);
+    }
+
+    return starsArr;
+  }
   
 
   return (
@@ -124,6 +132,16 @@ export function ProductPage(props: {data: ProductType | undefined; pageEl: HTMLE
 
         <div className="product-page__reviews">
           <h3 className="product-page__reviews--title">Reviews</h3>
+
+          <div className="product-page__reviews--content">
+            {props.data?.ratings?.map(rating => (
+              <div key={`${rating.dateTime}-${rating.title}`} className="review">
+                <p className="review__name">{rating.name}</p>
+                <p className="review__rating">{getRatingStars(rating.rating)}</p>
+                <p className="review__description">{rating.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

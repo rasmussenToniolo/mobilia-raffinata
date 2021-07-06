@@ -83,6 +83,7 @@
         cursor: pointer;
         background-color: transparent;
         border: 2px solid $light-grey;
+        border-radius: 2px;
         width: 8rem;
         height: 8rem;
         transition: border-color $fast-transition linear;
@@ -242,9 +243,49 @@
   &__reviews {
     position: relative;
     width: 100%;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 4rem;
+    
     &--title {
+      width: 20%;
       font-size: 3rem;
+      padding-left: 2rem;
+      color: $white;
+      border-bottom: 1px solid $light-grey;
+    }
+
+    &--content {
+      width: 100%;
+    }
+
+    .review {
+      margin: 2rem 0;
+      border-radius: 2px;
+      padding: .5rem 0;
+      border-bottom: 1px solid $light-grey;
+      border-top: 1px solid $light-grey;
+      display: flex;
+      flex-direction: column;
+      
+
+      &__name {
+        text-transform: capitalize;
+        font-size: 1.8rem;
+      }
+
+      &__rating {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+      }
+
+      &__description {
+        margin-top: .5rem;
+        color: $white;
+        font-size: 1.6rem;
+      }
     }
   }
 }
