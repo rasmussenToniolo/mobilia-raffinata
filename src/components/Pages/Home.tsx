@@ -31,7 +31,7 @@ export function Home(props: {setSelectedNavEl: (el: string) => void}) {
     videoBgEl.style.opacity = '0';
 
     const opacityVideo = setTimeout(() => {
-      videoBgEl.src = `../../img/bg-video-${curVideo}.mp4`;
+      videoBgEl.src = require(`../../img/bg-video-${curVideo}.mp4`);
       videoBgEl.style.opacity = '1';
     }, 1000);
 
@@ -41,7 +41,7 @@ export function Home(props: {setSelectedNavEl: (el: string) => void}) {
   return (
     <>
     <div className="home-background">
-      <video src="../../img/bg-video-1.mp4" className="home-background__content" autoPlay muted loop>
+      <video src={require('../../img/bg-video-1.mp4')} className="home-background__content" autoPlay muted loop>
         Browser not supported for video background.
       </video>
     </div>

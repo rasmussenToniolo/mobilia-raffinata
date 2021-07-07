@@ -37,8 +37,8 @@ export function About() {
   return (
     <>
       <div className="about-bg-photo">
-        <img src="../../img/new-barn-photo.jpg" alt="barn photo" id="new-photo" className="about-bg-photo__img" />
-        <img src="../../img/barn-photo.jpg" alt="barn photo" id="old-photo" className="about-bg-photo__img hidden" />
+        <img src={require("../../img/new-barn-photo.jpg")} alt="barn photo" id="new-photo" className="about-bg-photo__img" />
+        <img src={require("../../img/barn-photo.jpg")} alt="barn photo" id="old-photo" className="about-bg-photo__img hidden" />
       </div>
       <main className="about">
         <h2 className="about__title page-title">About us</h2>
