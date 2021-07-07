@@ -7,6 +7,10 @@
   height: 100%;
   background-color: $dark-grey;
   padding-top: 8rem;
+
+  @media (max-width: 700px) {
+    padding-top: 14rem;
+  }
   
   &__title {
     margin: 0 auto;
@@ -24,6 +28,10 @@
     cursor: pointer;
     background-color: transparent;
     filter: drop-shadow(0 0 2px black);
+
+    @media (max-width: 700px) {
+      top: 14rem;
+    }
     
     .bi {
       width: 5rem;
@@ -141,6 +149,11 @@
       line-height: 3rem;
       font-size: 3rem;
       color: $white;
+
+      @media (max-width: 600px) {
+        top: auto;
+        bottom: 0;
+      }
     }
 
     &--remove-btn {
@@ -165,6 +178,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
 
     &--price {
       font-size: 6rem;

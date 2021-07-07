@@ -4,6 +4,10 @@
   height: 100%;
   overflow-y: scroll;
 
+  // @media (max-width: 700px) {
+  //   // padding-top: 2rem;
+  // }
+
   &__back-btn {
     position: absolute;
     top: 2rem;
@@ -15,6 +19,10 @@
     align-items: center;
     cursor: pointer;
     transition: transform $medium-transition linear;
+
+    // @media (max-width: 700px) {
+    //   top: 2rem;
+    // }
 
     .bi {
       width: 4rem;
@@ -35,13 +43,19 @@
   &__product {
     position: relative;
     margin: 0 6rem;
-    // border: 2px solid white;
     margin-top: 4rem;
     margin-bottom: 14rem;
     width: calc(100% - 12rem);
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 7rem;
+    }
   }
 
   &__images {
@@ -72,7 +86,7 @@
 
     &--options {
       width: 100%;
-      height: 10rem;
+      height: 12rem;
       overflow-x: scroll;
       display: flex;
       flex-direction: row;
@@ -116,6 +130,11 @@
     align-items: flex-start;
     flex-direction: column;
     margin-left: 2rem;
+
+    @media (max-width: 700px) {
+      margin-top: 2rem;
+      margin-left: -6rem;
+    }
 
     &--title {
       font-size: 4rem;
@@ -247,6 +266,10 @@
     justify-content: center;
     align-items: flex-start;
     padding: 0 4rem;
+
+    @media (max-width: 700px) {
+      padding-bottom: 6rem;
+    }
     
     &--title {
       width: 20%;
