@@ -54,6 +54,10 @@ export function SmallCart(props: SmallCartProps) {
           </div>
         ))}
 
+        {props.cartItems && props.cartItems.length > 0 ? (
+          <button className="small-cart__open--checkout">Checkout</button>
+        ) : ''}
+
         {props.cartItems && props.cartItems.length < 1 ? (
           <p className="small-cart__open--no-items">No items in cart</p>
         ) : ''}

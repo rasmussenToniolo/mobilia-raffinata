@@ -32,6 +32,10 @@
     border-radius: 2px;
     background-color: $dark-grey;
     transition: visibility 0s, opacity $medium-transition ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     &--no-items {
       font-size: 2rem;
@@ -39,11 +43,30 @@
       text-align: center;
     }
 
+    &--checkout {
+      border: none;
+      border-radius: 2px;
+      background-color: $dark-grey;
+      color: $lighter-grey;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 1rem 2rem;
+      margin: 1rem;
+      transition: all $fast-transition linear;
+
+      &:hover {
+        color: $white;
+        background-color: $darker-grey;
+      }
+    }
+
     &-item {
+      width: 100%;
+      padding: 0 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 1rem;
+      margin: 1rem 0;
 
       &--img {
         width: 5rem;

@@ -163,6 +163,20 @@
         color: red;
       }
     }
+
+    &--error-msg {
+      transform: translateY(-1rem);
+      font-size: 1.8rem;
+      color: rgb(243, 148, 40);
+      width: 20rem;
+      height: 4rem;
+    }
+
+    &--confirmation-msg {
+      font-size: 1.8rem;
+      margin-left: 2rem;
+      color: $green;
+    }
   }
 
   &__color-selector {
