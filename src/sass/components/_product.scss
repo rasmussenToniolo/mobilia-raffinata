@@ -17,10 +17,6 @@
     align-items: center;
     overflow: hidden;
 
-    &:hover &--img {
-      object-fit: contain !important;
-    }
-    
     .img-control-btn {
       z-index: 300;
       cursor: pointer;
