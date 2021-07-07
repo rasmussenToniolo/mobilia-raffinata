@@ -29,13 +29,15 @@
     top: 6rem;
     border: .4rem solid $darker-grey;
     min-width: 24rem;
+    max-height: 60vh;
+    overflow-y: scroll;
     border-radius: 2px;
     background-color: $dark-grey;
     transition: visibility 0s, opacity $medium-transition ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
     &--no-items {
       font-size: 2rem;

@@ -1,5 +1,7 @@
 import { useState } from "react";
-import {CartItem} from '../../App';
+import {CartItem, checkoutPage} from '../../App';
+
+
 
 interface SmallCartProps {
   cartItems?: CartItem[];
@@ -55,7 +57,7 @@ export function SmallCart(props: SmallCartProps) {
         ))}
 
         {props.cartItems && props.cartItems.length > 0 ? (
-          <button className="small-cart__open--checkout">Checkout</button>
+          <button onClick={() => checkoutPage.toggleDisplay(true)} className="small-cart__open--checkout">Checkout</button>
         ) : ''}
 
         {props.cartItems && props.cartItems.length < 1 ? (

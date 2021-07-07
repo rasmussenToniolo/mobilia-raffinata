@@ -6,6 +6,7 @@ import {About} from './components/Pages/About';
 import { Products } from './components/Pages/Products/Products';
 import {Contact} from './components/Pages/Contact';
 import {Footer} from './components/Footer';
+import { Checkout } from './components/Pages/Checkout';
 
 export interface CartItem {
   id: string;
@@ -14,12 +15,21 @@ export interface CartItem {
   quantity: number;
   price: number;
   color: string;
+  availableStock: number;
 }
+
+export let checkoutPage: Checkout;
 
 export const App = () => {
   const [cartItems, setCartItems] = useState<CartItem[] | []>([]);
 
-  const [selectedNavEl, setSelectedNavEl] = useState<string>('home'); // Also change hash and scroll to top
+  const [selectedNavEl, setSelectedNavEl] = useState<string>('home');
+
+  const [checkoutDisplayed, setCheckoutDisplayed] = useState<boolean>(false);
+
+  checkoutPage = new Checkout({cartItems, setCartItems, display: checkoutDisplayed, setDisplay: setCheckoutDisplayed});
+
+  const checkoutPageRender = checkoutPage.render();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -50,6 +60,8 @@ export const App = () => {
         :
         ''}
       </div>
+
+      {checkoutPageRender}
 
       <Footer />
     </>

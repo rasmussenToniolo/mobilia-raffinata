@@ -111,7 +111,6 @@
 
 
   &__data {
-    // border: 2px solid white;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -125,20 +124,6 @@
 
     &--rating {
       font-size: 2rem;
-
-      &__btn {
-        cursor: pointer;
-        margin-left: 1rem;
-        color: $light-grey;
-        font-size: 1.6rem;
-        border-bottom: 1px solid transparent;
-        transition: all $fast-transition linear;
-
-        &:hover {
-          color: $lighter-grey;
-          border-color: $lighter-grey;
-        }
-      }
     }
 
     &--price {

@@ -89,7 +89,8 @@ export function ProductPage(props: ProductPageProps) {
       name: props.data.name,
       quantity: quantity,
       price: props.data.price,
-      color: selectedColor
+      color: selectedColor,
+      availableStock: props.data.stock
     }
 
     props.setCartItems([...props.cartItems, newItem] as CartItem[]);
@@ -159,7 +160,7 @@ export function ProductPage(props: ProductPageProps) {
 
           <div className="product-page__data">
             <h2 className="product-page__data--title">{props.data?.name}</h2>
-            <p className="product-page__data--rating">&#11088; {props.data ? getAvgRating(props.data).toFixed(1) : 0} <span onClick={() => console.log('scroll to reviews')} className="product-page__data--rating__btn"><a>See reviews</a></span></p>
+            <p className="product-page__data--rating">&#11088; {props.data ? getAvgRating(props.data).toFixed(1) : 0}</p>
             <p className="product-page__data--price">${props.data?.price}</p>
 
             <div className="product-page__color-selector">
