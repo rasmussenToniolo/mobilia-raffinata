@@ -1,93 +1,6 @@
 {
   "data": [
     {
-      "name": "Antique striped",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "category": "sofa",
-      "colors": ["red-white-stripe"],
-      "price": 5499,
-      "stock": 1,
-      "id": "SFA-ANTQ-STRP",
-      "images": ["https://images.unsplash.com/photo-1570569441276-ff551cba7331?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80", "https://images.unsplash.com/photo-1570569441276-ff551cba7331?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80", "https://images.unsplash.com/photo-1570569441276-ff551cba7331?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80", "https://images.unsplash.com/photo-1570569441276-ff551cba7331?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"],
-      "ratings": [
-        {
-        "name": "Johnny",
-        "rating": 5,
-        "title": "Can't complain",
-        "dateTime": "2014-01-23T01:23:45.678Z",
-        "description": "I sit and I feel like a king. Can't complain, can't complain."
-        },
-        {
-          "name": "Bob",
-          "rating": 4,
-          "title": "Whiskey baby",
-          "dateTime": "2014-04-13T01:23:45.678Z",
-          "description": "Perfect to have whiskey on the rocks while rockin this baby."
-        },
-        {
-          "name": "Alberta",
-          "rating": 2,
-          "title": "I've never felt so betrayed in my life",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
-        },
-        {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
-        }
-      ]
-    },
-    {
-      "name": "Curly whiteness",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "category": "chair",
-      "colors": ["white"],
-      "price": 549,
-      "stock": 3,
-      "id": "CHR-CRL-WHTNS",
-      "images": ["https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80"],
-      "ratings": [
-        {
-        "name": "Johnny",
-        "rating": 5,
-        "title": "Can't complain",
-        "dateTime": "2014-01-23T01:23:45.678Z",
-        "description": "I sit and I feel like a king. Can't complain, can't complain."
-        },
-        {
-          "name": "Bob",
-          "rating": 4,
-          "title": "Whiskey baby",
-          "dateTime": "2014-04-13T01:23:45.678Z",
-          "description": "Perfect to have whiskey on the rocks while rockin this baby."
-        },
-        {
-          "name": "Alberta",
-          "rating": 2,
-          "title": "I've never felt so betrayed in my life",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
-        },
-        {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
-        },
-        {
-          "name": "Jesus Christ",
-          "rating": 5,
-          "title": "Perfect for the last supper",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "My buddies and I loved this thing!"
-        }
-      ]
-    },
-    {
       "name": "Master cross",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "category": "chair",
@@ -117,13 +30,6 @@
           "title": "I've never felt so betrayed in my life",
           "dateTime": "2021-02-13T01:23:45.678Z",
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
-        },
-        {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
         },
         {
           "name": "Jesus Christ",
@@ -166,13 +72,6 @@
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
         },
         {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
-        },
-        {
           "name": "Jesus Christ",
           "rating": 5,
           "title": "Perfect for the last supper",
@@ -211,13 +110,6 @@
           "title": "I've never felt so betrayed in my life",
           "dateTime": "2021-02-13T01:23:45.678Z",
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
-        },
-        {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
         },
         {
           "name": "Jesus Christ",
@@ -260,13 +152,6 @@
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
         },
         {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
-        },
-        {
           "name": "Jesus Christ",
           "rating": 5,
           "title": "Perfect for the last supper",
@@ -305,13 +190,6 @@
           "title": "I've never felt so betrayed in my life",
           "dateTime": "2021-02-13T01:23:45.678Z",
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
-        },
-        {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
         },
         {
           "name": "Jesus Christ",
@@ -354,13 +232,6 @@
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
         },
         {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
-        },
-        {
           "name": "Jesus Christ",
           "rating": 5,
           "title": "Perfect for the last supper",
@@ -399,13 +270,6 @@
           "title": "I've never felt so betrayed in my life",
           "dateTime": "2021-02-13T01:23:45.678Z",
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
-        },
-        {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
         },
         {
           "name": "Jesus Christ",
@@ -448,13 +312,6 @@
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
         },
         {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
-        },
-        {
           "name": "Jesus Christ",
           "rating": 5,
           "title": "Perfect for the last supper",
@@ -493,13 +350,6 @@
           "title": "I've never felt so betrayed in my life",
           "dateTime": "2021-02-13T01:23:45.678Z",
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
-        },
-        {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
         },
         {
           "name": "Jesus Christ",
@@ -542,13 +392,6 @@
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
         },
         {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
-        },
-        {
           "name": "Jesus Christ",
           "rating": 5,
           "title": "Perfect for the last supper",
@@ -587,13 +430,6 @@
           "title": "I've never felt so betrayed in my life",
           "dateTime": "2021-02-13T01:23:45.678Z",
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
-        },
-        {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
         },
         {
           "name": "Jesus Christ",
@@ -635,13 +471,7 @@
           "dateTime": "2021-02-13T01:23:45.678Z",
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
         },
-        {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
-        },
+        
         {
           "name": "Jesus Christ",
           "rating": 5,
@@ -683,13 +513,6 @@
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
         },
         {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
-        },
-        {
           "name": "Jesus Christ",
           "rating": 5,
           "title": "Perfect for the last supper",
@@ -728,13 +551,6 @@
           "title": "I've never felt so betrayed in my life",
           "dateTime": "2021-02-13T01:23:45.678Z",
           "description": "This has been the absolute worst and apalling experience in my life, and I've lived through 2 world wars."
-        },
-        {
-          "name": "BRODY BUCKITY CHUCK BUCK",
-          "rating": 5,
-          "title": "HELL YEA BROTHER",
-          "dateTime": "2021-02-13T01:23:45.678Z",
-          "description": "REMINDS ME WHEN I SHOT MY FIRST 12 GAUGE AND HAD MY FIRST BEER AT 4 YEARS OLD, THIS THING MAKES ME RE-LIVE IT."
         },
         {
           "name": "Jesus Christ",
